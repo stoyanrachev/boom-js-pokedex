@@ -10,7 +10,8 @@ window.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       const pokemons = data.results;
       pokemons.forEach(pokemon => {
-        const li = document.createElement("li").innerText(pokemon.name);
+        let li = document.createElement("li");
+        li.innerText = pokemon.name;
         ul.appendChild(li);
       });
     })
